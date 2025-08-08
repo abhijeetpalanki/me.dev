@@ -7,6 +7,7 @@ import HeroSection from "./components/HeroSection";
 import CustomCursor from "./components/CustomCursor";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./components/ContactSection";
 
 const App = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const App = () => {
       <CustomCursor />
       <AboutSection />
       <ProjectsSection />
+      <ContactSection />
     </>
   );
 };
