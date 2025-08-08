@@ -9,6 +9,7 @@ import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import ProgressBar from "./components/ProgressBar";
 
 const App = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const App = () => {
       <ProjectsSection />
       <ContactSection />
       <Footer />
+      <ProgressBar />
     </>
   );
 };
