@@ -4,7 +4,10 @@ import Spline from "@splinetool/react-spline";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col-reverse items-center justify-between h-screen px-10 overflow-hidden bg-gradient-to-b from-violet-900 to-black xl:flex-row lg:px-24">
+    <section
+      id="home"
+      className="relative flex flex-col-reverse items-center justify-between h-screen px-10 overflow-hidden bg-gradient-to-b from-violet-900 to-black xl:flex-row lg:px-24"
+    >
       <div className="z-40 xl:mb-0 mb-[20%]">
         <motion.h1
           initial={{ opacity: 0, y: 80 }}

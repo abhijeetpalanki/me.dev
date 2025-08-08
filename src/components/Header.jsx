@@ -12,7 +12,7 @@ const Header = () => {
   const closeContactForm = () => setContactFormOpen(false);
 
   return (
-    <header className="absolute z-50 w-full transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-black">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto sm:px-6 lg:px-8 md:h-20">
         <motion.div
           className="flex items-center"
@@ -48,7 +48,7 @@ const Header = () => {
                 }}
                 key={item}
                 className="relative font-medium text-gray-800 transition-colors duration-300 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 group"
-                href="#"
+                href={`#${item.toLowerCase()}`}
               >
                 {item}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-violet-600 group-hover:w-full transition-all duration-300"></span>
@@ -111,7 +111,7 @@ const Header = () => {
             }}
             className="px-4 py-2 ml-4 font-bold transition-all duration-500 rounded-xl bg-gradient-to-r from-gray-400 to-gray-100 text-violet-700 hover:from-violet-700 hover:to-purple-700 hover:text-white"
           >
-            Hire Me
+            Contact Me
           </motion.button>
         </div>
 
@@ -141,7 +141,7 @@ const Header = () => {
             (item) => (
               <a
                 key={item}
-                href="#"
+                href={`#${item.toLowerCase()}`}
                 className="py-2 font-medium text-gray-300"
                 onClick={toggleMenu}
               >
