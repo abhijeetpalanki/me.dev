@@ -8,6 +8,7 @@ import CustomCursor from "./components/CustomCursor";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const App = () => {
       <AboutSection />
       <ProjectsSection />
       <ContactSection />
+      <Footer />
     </>
   );
 };
