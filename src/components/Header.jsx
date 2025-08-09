@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiGithub, FiTwitter, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
+import emailjs from "@emailjs/browser";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,39 @@ const Header = () => {
   const [contactFormOpen, setContactFormOpen] = useState(false);
   const openContactForm = () => setContactFormOpen(true);
   const closeContactForm = () => setContactFormOpen(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }
+      );
+
+      setFormData({ name: "", email: "", message: "" });
+      closeContactForm();
+    } catch (error) {
+      console.log(error);
+      closeContactForm();
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-black">
@@ -209,7 +243,7 @@ const Header = () => {
                 </button>
               </div>
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label
                     htmlFor="name"
@@ -220,8 +254,11 @@ const Header = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     placeholder="Your Name"
                     className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+                    onChange={handleInputChange}
+                    required
                   />
                 </div>
                 <div>
@@ -234,8 +271,11 @@ const Header = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="Your Email"
                     className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+                    onChange={handleInputChange}
+                    required
                   />
                 </div>
                 <div>
@@ -248,8 +288,11 @@ const Header = () => {
                   <textarea
                     rows={4}
                     id="message"
+                    name="message"
                     placeholder="How can I help you?"
                     className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+                    onChange={handleInputChange}
+                    required
                   />
                 </div>
 

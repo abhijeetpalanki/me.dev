@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import {
   FaArrowRight,
   FaConfluence,
@@ -183,12 +184,12 @@ const ExperienceSection = () => {
 
       <div className="flex flex-col items-center justify-between md:flex-row">
         {experiences.map((experience, index) => (
-          <>
+          <Fragment key={index}>
             <SingleExperience key={index} experience={experience} />
             {index < 2 ? (
               <FaArrowRight className="hidden text-4xl text-purple-500 lg:block" />
             ) : null}
-          </>
+          </Fragment>
         ))}
       </div>
     </section>

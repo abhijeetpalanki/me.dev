@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,6 +15,8 @@ import ExperienceSection from "./components/ExperienceSection";
 
 const App = () => {
   useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.refresh();
