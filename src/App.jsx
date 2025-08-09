@@ -10,6 +10,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import ProgressBar from "./components/ProgressBar";
+import ExperienceSection from "./components/ExperienceSection";
 
 const App = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const App = () => {
       <HeroSection />
       <CustomCursor />
       <AboutSection />
+      <ExperienceSection />
       <ProjectsSection />
       <ContactSection />
       <Footer />
