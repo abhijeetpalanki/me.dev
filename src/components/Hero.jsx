@@ -61,7 +61,7 @@ const Hero = () => {
               variants={childVariants}
               className="bg-linear-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
             >
-              Lead Frontend Developer
+              Senior Frontend Engineer · Tech Lead
             </motion.span>
             <motion.p
               variants={childVariants}

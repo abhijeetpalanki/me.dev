@@ -11,7 +11,7 @@ export const ABOUT_TEXT = `I am a dedicated and versatile UI developer with a pa
 export const EXPERIENCES = [
   {
     year: "Feb 2026 - Present",
-    role: "Lead Frontend Developer",
+    role: "Tech Lead (Frontend)",
     company: "Tropical Smoothie Cafe",
     description: `Co-lead frontend development for the new tropicalsmoothiecafe.com ordering platform with a second lead, guiding 17 developers (5 onshore, 12 offshore) across a Next.js app, a React component library and a shared TypeScript core also used by the React Native app. Built and launched ordering features across menu customization, cart, checkout, rewards, reorder, favorites, delivery and group ordering. Review pull requests daily, run releases across dev, stage and production, and triage production issues with Datadog RUM, AWS CloudWatch and Quantum Metric.`,
     technologies: [
