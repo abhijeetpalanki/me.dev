@@ -37,6 +37,20 @@ const Projects = () => {
               className="w-full max-w-xl lg:w-3/4"
             >
               <h3 className="mb-2 font-semibold text-2xl">{project.title}</h3>
+              {(project.live || project.repo) && (
+                <p className="mb-3 flex gap-4 text-sm">
+                  {project.live && (
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-purple-300 underline-offset-4 hover:underline">
+                      Live site
+                    </a>
+                  )}
+                  {project.repo && (
+                    <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-purple-300 underline-offset-4 hover:underline">
+                      Code on GitHub
+                    </a>
+                  )}
+                </p>
+              )}
               <p className="mb-4 text-stone-400">{project.description}</p>
               <div className="flex flex-wrap items-center justify-start gap-1">
                 {project.technologies.map((tech, index) => (

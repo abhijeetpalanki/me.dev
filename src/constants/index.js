@@ -3,6 +3,7 @@ import project2 from "../assets/projects/Live Docs.png";
 import project3 from "../assets/projects/Whiz.png";
 import project4 from "../assets/projects/Insights.png";
 import project5 from "../assets/projects/2048.png";
+import project6 from "../assets/projects/Sponsor Radar.png";
 
 export const HERO_CONTENT = `I lead frontend development for Tropical Smoothie Cafe's online ordering platform: a Next.js site, its React component library, and a shared TypeScript core that the React Native app runs on too. Nearly ten years of React, Next.js and TypeScript, from Walmart and Tyler Technologies to today. Most of my work is making sure an order goes through on the first tap. The rest is finding out why it didn't.`;
 
@@ -86,6 +87,15 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "Sponsor Radar - H-1B Sponsor Job Search",
+    image: project6,
+    description:
+      "Matches open frontend and fullstack roles at 56 companies to each employer's certified H-1B filings in U.S. Department of Labor data. A Node.js GraphQL API batches lookups with DataLoader and pages with cursors, and a GitHub Action refreshes the job boards every night.",
+    technologies: ["Next.js", "TypeScript", "Node.js", "GraphQL Yoga", "DataLoader", "Vitest", "GitHub Actions"],
+    live: "https://abhijeetpalanki-sponsor-radar.netlify.app",
+    repo: "https://github.com/abhijeetpalanki/sponsor-radar",
+  },
   {
     title: "Shirty - 3D Shirt Customizer",
     image: project1,
