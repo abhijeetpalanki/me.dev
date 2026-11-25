@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Credentials from "./components/Credentials";
 import Contact from "./components/Contact";
+import watermark from "./assets/ap-mark-watermark.webp";
 
 const App = () => {
   return (
@@ -20,11 +21,18 @@ const App = () => {
           Skip to main content
         </a>
 
-        <div className="fixed inset-0 -z-10" aria-hidden="true">
-          <div className="relative h-full w-full bg-black">
-            <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[14px_24px]"></div>
-            <div className="absolute left-0 right-0 top-[-10%] h-250 w-250 rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
-          </div>
+        {/* Brand background, matching the LinkedIn banner: near-black, a faint dot grid,
+            a soft light near the top, and the AP mark large and faint in the corner. */}
+        <div className="fixed inset-0 -z-10 overflow-hidden bg-[#111111]" aria-hidden="true">
+          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.045)_1.2px,transparent_1.2px)] bg-size-[22px_22px]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(900px_520px_at_50%_0%,rgba(255,255,255,0.06),transparent_70%)]"></div>
+          <img
+            src={watermark}
+            alt=""
+            width={982}
+            height={900}
+            className="absolute -right-24 -bottom-40 h-[70vh] w-auto opacity-[0.05] select-none"
+          />
         </div>
 
         <div className="container mx-auto px-8">
