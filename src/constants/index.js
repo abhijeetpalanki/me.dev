@@ -5,6 +5,18 @@ import shirtyImage from "../assets/projects/Shirty.webp";
 
 // Keep this file in step with the resume (A:/Personal/linkedin/resume) and LinkedIn.
 
+// Matches the LinkedIn headline: "Lead Technology Architect | AI & Generative AI | Enterprise Solutions |
+// Web & Frontend | Mobile Applications | Kiosk Development | Digital Transformation".
+export const HEADLINE_TITLE = "Lead Technology Architect";
+export const HEADLINE_AREAS = [
+  "AI & Generative AI",
+  "Enterprise Solutions",
+  "Web & Frontend",
+  "Mobile Applications",
+  "Kiosk Development",
+  "Digital Transformation",
+];
+
 export const HERO_CONTENT = `I co-lead frontend development for Tropical Smoothie Cafe's online ordering platform: a Next.js site, its React component library, and a shared TypeScript core that the React Native app runs on too. Nearly ten years of React, Next.js and TypeScript, from Walmart and Tyler Technologies to today. Most of my work is making sure an order goes through on the first tap. The rest is finding out why it didn't.`;
 
 export const EXPERIENCES = [

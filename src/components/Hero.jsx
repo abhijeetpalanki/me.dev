@@ -1,7 +1,7 @@
 import React from "react";
 import profileCircle from "../assets/profile-circle.webp";
 import profilePortrait from "../assets/profile-portrait.webp";
-import { HERO_CONTENT } from "../constants";
+import { HEADLINE_AREAS, HEADLINE_TITLE, HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -74,10 +74,24 @@ const Hero = () => {
             </motion.h1>
             <motion.p
               variants={childVariants}
-              className="bg-linear-to-r from-stone-200 to-stone-400 bg-clip-text text-3xl tracking-tight text-transparent"
+              className="bg-linear-to-r from-stone-200 to-stone-400 bg-clip-text text-center text-3xl tracking-tight text-transparent lg:text-left"
             >
-              Senior Frontend Engineer · Tech Lead
+              {HEADLINE_TITLE}
             </motion.p>
+            <motion.ul
+              variants={childVariants}
+              aria-label="Focus areas"
+              className="mt-4 flex max-w-xl flex-wrap justify-center gap-2 lg:justify-start"
+            >
+              {HEADLINE_AREAS.map((area) => (
+                <li
+                  key={area}
+                  className="rounded-full border border-stone-700 px-3 py-1 text-sm text-stone-300"
+                >
+                  {area}
+                </li>
+              ))}
+            </motion.ul>
             <motion.p
               variants={childVariants}
               className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter text-pretty"
