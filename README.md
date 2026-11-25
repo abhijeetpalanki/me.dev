@@ -1,28 +1,37 @@
-# 🌐 me.dev — Personal Portfolio Website
+# me.dev
 
-A modern, high-performance developer portfolio built with **React**, **TypeScript**, and a clean component-driven architecture.  
-This site showcases my professional experience, personal projects, technical skills, and engineering philosophy — all wrapped in a fast, responsive, and elegant UI.
+My portfolio site: [abhijeetpalanki.netlify.app](https://abhijeetpalanki.netlify.app/)
 
----
+A single page with my experience, projects, skills, education and certification, and how to reach me. The content is kept in step with my resume and LinkedIn.
 
-## 🚀 Features
+## Built with
 
-- ✅ Fully responsive design optimized for desktop and mobile
-- 🧩 Component-driven architecture using React + TypeScript
-- 🖼️ Project showcase with images, descriptions, and tech stacks
-- 📈 Experience timeline highlighting senior-level frontend roles
-- 🎨 Clean, modern UI with smooth transitions and polished layout
-- 🔧 Easy to extend with new projects, sections, or themes
-- 🔍 SEO-friendly metadata and structure
+- React 19 and Vite 7
+- Tailwind CSS 4
+- Framer Motion for entrance animations (turned off for anyone who asks their OS for reduced motion)
+- React Icons
+- Netlify, which deploys every push to `main`
 
----
+## How it works
 
-## 🛠️ Tech Stack
+- All text lives in [`src/constants/index.js`](src/constants/index.js). Each section in [`src/components`](src/components) reads from it.
+- `npm run build` builds the site, then renders the page to HTML at build time ([`prerender.mjs`](prerender.mjs)) so the content is in `dist/index.html` before any JavaScript runs. In the browser, React attaches to that HTML instead of rebuilding it.
+- The hero photo switches by screen size: a round headshot on phones and tablets, a portrait on desktop.
+
+## Accessibility
+
+- One `h1`, landmark regions (header, main, footer) and a skip link
+- Visible keyboard focus on every link
+- Text contrast of at least 4.5:1 on the dark background
+- Every icon has a text label, and every image has alt text
+- Motion respects `prefers-reduced-motion`
+
+## Run it locally
 
 ```bash
-React
-JavaScript (ES6+)
-CSS / SCSS
-Vite
-Netlify (deployment)
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build with pre-rendered HTML in dist/
+npm run preview  # serve the production build
+npm run lint
 ```

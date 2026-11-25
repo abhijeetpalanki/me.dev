@@ -1,7 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 :root {
   font-family: "Inter", sans-serif;
   background: #000;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* One visible focus style for every link and button, keyboard only. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #d8b4fe;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Section anchors land below the top edge instead of flush against it. */
+section[id] {
+  scroll-margin-top: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

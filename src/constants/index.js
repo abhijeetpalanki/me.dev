@@ -1,95 +1,83 @@
-import project1 from "../assets/projects/Shirty.png";
-import project2 from "../assets/projects/Live Docs.png";
-import project3 from "../assets/projects/Whiz.png";
-import project4 from "../assets/projects/Insights.png";
-import project5 from "../assets/projects/2048.png";
-import project6 from "../assets/projects/Sponsor Radar.png";
+import sponsorRadarImage from "../assets/projects/Sponsor Radar.webp";
+import sumdayImage from "../assets/projects/Sumday.webp";
+import game2048Image from "../assets/projects/2048.webp";
+import shirtyImage from "../assets/projects/Shirty.webp";
 
-export const HERO_CONTENT = `I lead frontend development for Tropical Smoothie Cafe's online ordering platform: a Next.js site, its React component library, and a shared TypeScript core that the React Native app runs on too. Nearly ten years of React, Next.js and TypeScript, from Walmart and Tyler Technologies to today. Most of my work is making sure an order goes through on the first tap. The rest is finding out why it didn't.`;
+// Keep this file in step with the resume (A:/Personal/linkedin/resume) and LinkedIn.
 
-export const ABOUT_TEXT = `I am a dedicated and versatile UI developer with a passion for creating efficient and user-friendly web applications. With 10 years of professional experience, I have worked with a variety of technologies, including React, React Native, Next.js, and Node.js. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const HERO_CONTENT = `I co-lead frontend development for Tropical Smoothie Cafe's online ordering platform: a Next.js site, its React component library, and a shared TypeScript core that the React Native app runs on too. Nearly ten years of React, Next.js and TypeScript, from Walmart and Tyler Technologies to today. Most of my work is making sure an order goes through on the first tap. The rest is finding out why it didn't.`;
 
 export const EXPERIENCES = [
   {
     year: "Feb 2026 - Present",
     role: "Tech Lead (Frontend)",
     company: "Tropical Smoothie Cafe",
-    description: `Co-lead frontend development for the new tropicalsmoothiecafe.com ordering platform with a second lead, guiding 17 developers (5 onshore, 12 offshore) across a Next.js app, a React component library and a shared TypeScript core also used by the React Native app. Built and launched ordering features across menu customization, cart, checkout, rewards, reorder, favorites, delivery and group ordering. Review pull requests daily, run releases across dev, stage and production, and triage production issues with Datadog RUM, AWS CloudWatch and Quantum Metric.`,
+    description: `Co-lead 17 engineers (5 onshore, 12 offshore) on the new web ordering platform: a Next.js app, a React component library and a shared TypeScript core used by the React Native app. Took on the mobile apps in Oct 2026. Lead delivery across menu customization, cart, checkout, rewards, reorder, favorites, delivery and group ordering. Set the team's quality standard of 100% test coverage on changed code, review pull requests daily (about 1,900 merged so far), run releases across dev, stage and production, and lead root-cause analysis of production issues with Datadog RUM, AWS CloudWatch and Quantum Metric. Built Frond, the team's Claude Code plugin for code review, test coverage checks, QA test cases and WCAG 2.2 accessibility testing, with approval gates on commits and deploys.`,
     technologies: [
       "Next.js",
-      "React.js",
+      "React",
       "TypeScript",
       "React Native",
+      "Node.js",
       "Tailwind CSS",
+      "SonarCloud",
       "Datadog",
+      "Claude Code",
     ],
   },
   {
     year: "Jul 2024 - Jan 2026",
-    role: "UI (React/React Native) Developer",
-    company: "Sam's Club",
-    description: `Built React and React Native applications for 1M+ daily users, including cross-platform React Native modules with native iOS/Android bridges on the Hermes engine, a Gen-AI item catalog tool on OpenAI embeddings and Pinecone vector search, and an AI personalization engine driven by vector similarity. Responsible for leading frontend architecture decisions, improving rendering performance, implementing scalable state management patterns, and driving UI modernization across teams. Worked closely with architects, backend engineers, and product stakeholders to deliver reliable, performant, and maintainable React and React Native applications at enterprise scale.`,
+    role: "UI Developer (React / React Native)",
+    company: "Sam's Club (Walmart)",
+    description: `Improved rendering performance for 1M+ daily active users using Suspense, concurrent rendering, virtualization and memoization. Cut regression run time by 40% by running Playwright, Cypress and Detox suites in parallel while keeping coverage above 85%. Built a generative-AI catalog maintenance tool on OpenAI embeddings and Pinecone vector search, with inference latency traced through OpenTelemetry. Delivered embedding-based UI personalization, a Redux Toolkit and RTK Query data layer, React Native native modules (iOS and Android, Hermes) for faster startup, and Module Federation micro-frontends that let teams deploy independently.`,
     technologies: [
-      "React.js",
+      "React",
       "React Native",
       "TypeScript",
-      "JavaScript (ES6+)",
-      "Redux",
+      "Redux Toolkit",
+      "RTK Query",
+      "Module Federation",
+      "Playwright",
+      "OpenAI",
+      "Pinecone",
     ],
   },
   {
     year: "Dec 2020 - Apr 2024",
     role: "React JS Developer",
     company: "Tyler Technologies",
-    description: `Worked in a large enterprise product team, owning the design and development of complex React applications built on micro-frontend and modular architectures. Led frontend modernization efforts, improved CI/CD reliability, and established testing standards across multiple teams. Collaborated with cross-functional groups to deliver mission-critical features for government and public-sector clients.`,
+    description: `Improved First Contentful Paint by 25% and SEO on public-facing portals by moving them to Next.js server-side rendering and incremental static regeneration. Cut deployment time by 30% by containerizing frontends on Docker and Kubernetes with coverage-gated test pipelines. Built enterprise React applications on a micro-frontend architecture with dynamic Module Federation, designed the shared API layer (token refresh, retries with backoff, centralized error handling), and mentored junior engineers on testing, architecture and accessibility.`,
     technologies: [
-      "React.js",
+      "React",
+      "Next.js",
       "TypeScript",
-      "JavaScript (ES6+)",
-      "Redux",
+      "Module Federation",
+      "Docker",
+      "Kubernetes",
+      "Jest",
       "React Testing Library",
     ],
   },
   {
-    year: "Jul 2020 - Dec 2020",
-    role: "React JS Developer",
-    company: "Arkansas Department of Education",
-    description: `Contributed to the development of multi-screen, high-traffic React applications supporting statewide digital services. Responsible for building reusable components, improving accessibility and performance, and integrating frontend workflows with backend APIs. Played a key role in reducing QA overhead through automated testing and improving overall application reliability.`,
-    technologies: [
-      "React.js",
-      "React Router",
-      "TypeScript",
-      "Redux",
-      "Enzyme",
-    ],
-  },
-  {
-    year: "Aug 2018 - Jul 2020",
-    role: "Frontend Developer",
-    company: "Arkansas Department of Education",
-    description: `Worked on modernizing legacy systems by building React-based applications with shared ES6 codebases supporting both SSR and CSR. Implemented performance enhancements, PWA capabilities, and custom middleware for monitoring and debugging. Supported multiple teams by delivering reusable UI modules and improving application stability across browsers and devices.`,
-    technologies: ["React.js", "JavaScript (ES6+)", "Redux", "PWA"],
+    year: "Aug 2018 - Dec 2020",
+    role: "React JS Developer, Dept. of Finance and Administration (2020); Frontend Developer, Dept. of Education (2018 - 2020)",
+    company: "State of Arkansas",
+    description: `Reduced Time to Interactive by 30% through Lighthouse and React Profiler audits, and added offline support with service workers and push notifications. Cut manual QA cycles by 25% with Jest and Enzyme tests, and delivered responsive, WCAG-aligned interfaces. Implemented SAML single sign-on for the MySped and MyAdmin applications.`,
+    technologies: ["React", "Redux", "Jest", "Enzyme", "Service Workers", "SAML SSO"],
   },
   {
     year: "Jan 2017 - Jun 2018",
     role: "Programmer Analyst",
-    company: "Walmart Stores Inc.",
-    description: `Developed Angular-based internal applications used across Walmart's enterprise operations. Responsible for building responsive UI components, optimizing performance through modern Angular tooling, and improving developer workflows with automated testing and CI integration. Contributed to authentication flows, design system components, and performance-focused enhancements across multiple internal tools.`,
-    technologies: [
-      "Angular 4",
-      "TypeScript",
-      "RxJS",
-      "Angular Material",
-      "Jasmine",
-      "Karma",
-    ],
+    company: "Walmart",
+    description: `Built Angular and TypeScript applications with RxJS and Angular Material, using ahead-of-time compilation, lazy loading and Jasmine and Karma coverage gates in CI.`,
+    technologies: ["Angular", "TypeScript", "RxJS", "Angular Material", "Jasmine", "Karma"],
   },
 ];
 
 export const PROJECTS = [
   {
     title: "Sponsor Radar - H-1B Sponsor Job Search",
-    image: project6,
+    image: sponsorRadarImage,
     description:
       "Matches open frontend and fullstack roles at 56 companies to each employer's certified H-1B filings in U.S. Department of Labor data. A Node.js GraphQL API batches lookups with DataLoader and pages with cursors, and a GitHub Action refreshes the job boards every night.",
     technologies: ["Next.js", "TypeScript", "Node.js", "GraphQL Yoga", "DataLoader", "Vitest", "GitHub Actions"],
@@ -97,44 +85,51 @@ export const PROJECTS = [
     repo: "https://github.com/abhijeetpalanki/sponsor-radar",
   },
   {
-    title: "Shirty - 3D Shirt Customizer",
-    image: project1,
+    title: "Sumday - Daily Number Puzzle",
+    image: sumdayImage,
     description:
-      "Pick a color, drop in a logo, or print a design across the whole shirt, and watch it update on a lit 3D model. The shirt color eases toward the selected value every frame instead of snapping to it.",
-    technologies: ["React", "React Three Fiber", "Three.js", "valtio", "Framer Motion"],
-  },
-  {
-    title: "LiveDocs - Collaborative Document Editor",
-    image: project2,
-    description:
-      "A real-time collaborative document editor built on the Lexical editor, with Liveblocks keeping every open copy in sync and Clerk for sign-in.",
-    technologies: ["Next.js", "TypeScript", "Lexical", "Liveblocks", "Clerk", "Sentry"],
-  },
-  {
-    title: "Whiz - Video Conferencing App",
-    image: project3,
-    description:
-      "A video conferencing app built with Next.js on the Stream Video SDK, with Clerk for sign-in.",
-    technologies: ["Next.js", "TypeScript", "Stream Video SDK", "Clerk", "Tailwind CSS"],
-  },
-  {
-    title: "Gen-AI Item Catalog Maintenance (Sam's Club)",
-    image: project4,
-    description:
-      "An AI-driven catalog enrichment system using embeddings and vector search to automate product classification and semantic retrieval.",
-    technologies: ["OpenAI", "Node.js"],
+      "A daily number puzzle app for iOS and Android: five tiles, one target, combine them with + − × ÷ until a tile hits the target. A pure TypeScript engine turns the date into a seed, generates and exhaustively solves each day's puzzles, grades their difficulty, and warns you the moment the target can no longer be reached. No backend, no accounts, no network calls.",
+    technologies: ["React Native", "Expo", "TypeScript", "Reanimated", "AsyncStorage"],
+    repo: "https://github.com/abhijeetpalanki/Sumday",
   },
   {
     title: "2048, animated with zero animation libraries",
-    image: project5,
+    image: game2048Image,
     description:
       "Two nested Sass @for loops generate a @keyframes rule for every row and column move: 24 animations written at build time. React only picks the class name, and CSS plays the animation. 44 KB of JavaScript, gzipped.",
     technologies: ["React", "JavaScript (ES6+)", "Sass", "CSS keyframes"],
+    live: "https://abhijeetpalanki-2048.netlify.app/",
+    repo: "https://github.com/abhijeetpalanki/2048",
+  },
+  {
+    title: "Shirty - 3D Shirt Customizer",
+    image: shirtyImage,
+    description:
+      "Pick a color, drop in a logo, or print a design across the whole shirt, and watch it update on a lit 3D model. The shirt color eases toward the selected value every frame instead of snapping to it.",
+    technologies: ["React", "React Three Fiber", "Three.js", "valtio", "Framer Motion"],
+    live: "https://abhijeetpalanki-shirty.netlify.app/",
+    repo: "https://github.com/abhijeetpalanki/Shirty",
+  },
+];
+
+export const GITHUB_URL = "https://github.com/abhijeetpalanki";
+
+export const EDUCATION = [
+  { degree: "M.S., Computer Science", school: "University of Bridgeport", year: "2016" },
+  { degree: "B.Tech., Electronics and Communication", school: "SRM University", year: "2015" },
+];
+
+export const CERTIFICATIONS = [
+  {
+    name: "Claude Certified Architect - Professional (CCAR-P)",
+    issuer: "Anthropic",
+    date: "Nov 2026",
+    url: "https://www.credly.com/badges/6058fd10-ee80-4837-be5c-43c1f97aa718/public_url",
   },
 ];
 
 export const CONTACT = {
   address: "Atlanta, GA",
-  phoneNo: "+1 (203) 385-2663 ",
+  phoneNo: "+1 (203) 385-2663",
   email: "ajpalanki@gmail.com",
 };

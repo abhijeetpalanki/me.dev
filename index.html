@@ -5,6 +5,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    />
     <title>Abhijeet Palanki · Senior Frontend Engineer · Tech Lead</title>
     <meta name="description" content="Senior frontend engineer and tech lead at Tropical Smoothie Cafe. React, Next.js, React Native and TypeScript. I build ordering flows and find out why they break." />
     <meta property="og:type" content="website" />
@@ -18,6 +26,18 @@
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <style>
+        /* Without JavaScript, show sections that would otherwise wait to fade in. */
+        #root [style*="opacity"] { opacity: 1 !important; transform: none !important; }
+      </style>
+      <p style="color:#d6d3d1;font-family:sans-serif;padding:2rem">
+        Abhijeet Palanki, Senior Frontend Engineer and Tech Lead.
+        <a href="/resume.pdf" style="color:#d8b4fe">Resume (PDF)</a> ·
+        <a href="https://www.linkedin.com/in/abhijeetpalanki/" style="color:#d8b4fe">LinkedIn</a> ·
+        <a href="https://github.com/abhijeetpalanki" style="color:#d8b4fe">GitHub</a>
+      </p>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

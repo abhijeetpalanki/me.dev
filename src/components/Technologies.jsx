@@ -1,21 +1,53 @@
 import React from "react";
-import { FaAngular, FaDocker, FaNodeJs } from "react-icons/fa";
+import { FaAws, FaDocker, FaNodeJs } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
 import { RiNextjsLine, RiReactjsLine } from "react-icons/ri";
-import { SiKubernetes, SiMocha, SiWebpack } from "react-icons/si";
 import {
+  SiClaude,
+  SiCypress,
+  SiDatadog,
+  SiGithubactions,
+  SiJest,
+  SiKubernetes,
+  SiStorybook,
+  SiTailwindcss,
+  SiTestinglibrary,
+} from "react-icons/si";
+import {
+  TbBrandReactNative,
   TbBrandRedux,
-  TbBrandThreejs,
   TbBrandTypescript,
 } from "react-icons/tb";
 import { motion } from "framer-motion";
+
+// Matches the Skills section of the resume. Colors keep at least 3:1 contrast on the black background.
+const TECHNOLOGIES = [
+  { name: "React", Icon: RiReactjsLine, color: "text-cyan-400", duration: 2.5 },
+  { name: "Next.js", Icon: RiNextjsLine, color: "text-white", duration: 6 },
+  { name: "React Native", Icon: TbBrandReactNative, color: "text-sky-400", duration: 3.5 },
+  { name: "TypeScript", Icon: TbBrandTypescript, color: "text-blue-500", duration: 5 },
+  { name: "Node.js", Icon: FaNodeJs, color: "text-green-500", duration: 3 },
+  { name: "Redux Toolkit", Icon: TbBrandRedux, color: "text-violet-400", duration: 2 },
+  { name: "GraphQL", Icon: GrGraphQl, color: "text-pink-500", duration: 7.5 },
+  { name: "Tailwind CSS", Icon: SiTailwindcss, color: "text-teal-400", duration: 4 },
+  { name: "Jest", Icon: SiJest, color: "text-red-400", duration: 5.5 },
+  { name: "Testing Library", Icon: SiTestinglibrary, color: "text-rose-400", duration: 2.5 },
+  { name: "Cypress", Icon: SiCypress, color: "text-stone-200", duration: 4.5 },
+  { name: "Storybook", Icon: SiStorybook, color: "text-pink-400", duration: 3 },
+  { name: "Docker", Icon: FaDocker, color: "text-cyan-500", duration: 1.5 },
+  { name: "Kubernetes", Icon: SiKubernetes, color: "text-blue-500", duration: 2 },
+  { name: "GitHub Actions", Icon: SiGithubactions, color: "text-blue-400", duration: 6 },
+  { name: "Datadog", Icon: SiDatadog, color: "text-violet-400", duration: 3.5 },
+  { name: "AWS", Icon: FaAws, color: "text-amber-500", duration: 5 },
+  { name: "Claude Code", Icon: SiClaude, color: "text-orange-400", duration: 2 },
+];
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
   animate: {
     y: [10, -10],
     transition: {
-      duration: duration,
+      duration,
       ease: "linear",
       repeat: Infinity,
       repeatType: "reverse",
@@ -25,121 +57,37 @@ const iconVariants = (duration) => ({
 
 const Technologies = () => {
   return (
-    <div className="pb-24">
+    <section id="technologies" aria-labelledby="technologies-heading" className="pb-24">
       <motion.h2
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
+        id="technologies-heading"
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -40 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
         className="my-20 text-center text-4xl"
       >
-        Technologies
+        Skills
       </motion.h2>
-      <motion.div
+      <motion.ul
         whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-wrap items-center justify-center gap-4"
+        initial={{ opacity: 0, x: -40 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-wrap items-start justify-center gap-4"
       >
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(2.5)}
-        >
-          <RiReactjsLine className="text-7xl text-cyan-400" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(3)}
-          className="p-4"
-        >
-          <FaNodeJs className="text-7xl text-green-500" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(5)}
-          className="p-4"
-        >
-          <TbBrandTypescript className="text-7xl text-blue-500" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(2)}
-          className="p-4"
-        >
-          <TbBrandRedux className="text-7xl text-violet-400" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(6)}
-          className="p-4"
-        >
-          <RiNextjsLine className="text-7xl text-white" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(4)}
-          className="p-4"
-        >
-          <FaAngular className="text-7xl text-red-500" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(5)}
-          className="p-4"
-        >
-          <SiMocha className="text-7xl text-amber-800" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(7.5)}
-          className="p-4"
-        >
-          <GrGraphQl className="text-7xl text-pink-500" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(1.5)}
-          className="p-4"
-        >
-          <FaDocker className="text-7xl text-cyan-500" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(2)}
-          className="p-4"
-        >
-          <SiKubernetes className="text-7xl text-blue-800" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(6)}
-          className="p-4"
-        >
-          <SiWebpack className="text-7xl text-blue-200" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(2)}
-          className="p-4"
-        >
-          <TbBrandThreejs className="text-7xl text-white" />
-        </motion.div>
-      </motion.div>
-    </div>
+        {TECHNOLOGIES.map((tech) => {
+          const { name, Icon, color, duration } = tech;
+          return (
+            <li key={name} className="flex w-24 flex-col items-center gap-2 p-2">
+              <motion.div initial="initial" animate="animate" variants={iconVariants(duration)}>
+                <Icon aria-hidden="true" className={`text-7xl ${color}`} />
+              </motion.div>
+              <span className="text-xs text-stone-400">{name}</span>
+            </li>
+          );
+        })}
+      </motion.ul>
+    </section>
   );
 };
 

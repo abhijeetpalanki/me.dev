@@ -2,43 +2,31 @@ import React from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 
+const linkClass =
+  "border-b border-stone-500 transition-colors hover:border-white hover:text-white";
+
 const Contact = () => {
   return (
-    <div className="border-t border-stone-900 pb-20">
-      <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 1, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-10 text-center text-4xl"
-      >
+    <footer id="contact" aria-labelledby="contact-heading" className="scroll-mt-8 border-t border-stone-900 pb-20">
+      <h2 id="contact-heading" className="my-10 text-center text-4xl">
         Get in Touch
-      </motion.h2>
-      <div className="text-center tracking-tighter">
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1 }}
-          className="my-4"
-        >
-          {CONTACT.address}
-        </motion.p>
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1 }}
-          className="my-4"
-        >
+      </h2>
+      <motion.address
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-center gap-4 text-center not-italic tracking-tighter"
+      >
+        <p>{CONTACT.address}</p>
+        <a href={`tel:${CONTACT.phoneNo.replace(/[^+\d]/g, "")}`} className={linkClass}>
           {CONTACT.phoneNo}
-        </motion.p>
-        <a
-          href="mailto:ajpalanki@gmail.com"
-          target="_blank"
-          className="border-b"
-        >
+        </a>
+        <a href={`mailto:${CONTACT.email}`} className={linkClass}>
           {CONTACT.email}
         </a>
-      </div>
-    </div>
+      </motion.address>
+    </footer>
   );
 };
 
