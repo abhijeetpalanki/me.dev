@@ -44,8 +44,8 @@ const Hero = () => {
               <source
                 media="(min-width: 1024px)"
                 srcSet={profilePortrait}
-                width={343}
-                height={512}
+                width={686}
+                height={1024}
               />
               <img
                 src={profileCircle}
@@ -53,7 +53,7 @@ const Hero = () => {
                 width={512}
                 height={512}
                 fetchPriority="high"
-                className="h-auto w-56 sm:w-64 lg:w-auto lg:max-w-[343px] lg:rounded-3xl lg:border lg:border-stone-800"
+                className="h-auto w-56 sm:w-64 lg:w-full lg:max-w-110 lg:rounded-3xl lg:border lg:border-stone-800"
               />
             </motion.picture>
           </div>
